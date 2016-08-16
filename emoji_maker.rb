@@ -64,7 +64,7 @@ class Wizard
         puts "saved: " + "./emojis/#{e.name}.png".colorize(:light_blue)
       end
     end
-    puts "downloaded #{new_emojis.length} emojis".colorize(:green)
+    puts "downloaded #{new_emojis.length} emojis".colorize(:green)just t
     debugger if new_emojis.empty?
     new_emojis
   end
@@ -81,8 +81,8 @@ class Wizard
   def login
     begin
       if email = find('#email')
-        fill_in 'email', with: 'jordanfarn23@gmail.com'
-        fill_in 'password', with: 'tampasox8*'
+        fill_in 'email', with: SLACK_EMAIL
+        fill_in 'password', with: SLACK_PASSWORD
         click_on "signin_btn"
       end
     rescue => e
